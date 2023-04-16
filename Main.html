@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/SingIn.png" type="image/x-icon">
+  <link rel="stylesheet" href="style/root.css">
+  <link rel="stylesheet" href="style/Main.css">
+
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-storage.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="users">
+    <h2>Дата создания</h2>
+    <p class="data">_________________________</p>
+    <h2>Почта</h2>
+    <p class="email">_________________________</p> 
+    <h2>Никнейм</h2>
+    <p class="name">_________________________</p>
+    <h2>Пароль</h2>
+    <p class="password">_________________________</p>
+    <h2>ID для поиска</h2>
+    <p class="searchId">_________________________</p>
+  </div>
+  <div class="buttons">
+    <button id="delete">delete</button>
+    <button id="outof" onclick="window.location.href = `index.html`">выход</button>
+  </div>
+
+  <script type="module" src="script/chat.js"></script>
+</body>
+
+</html>
