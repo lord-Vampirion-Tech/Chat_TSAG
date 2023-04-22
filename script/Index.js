@@ -11,7 +11,7 @@ const alert_text = $(`#alert  #text`)
 const img = $(`#img`)
 let imgURL = ""
 let file = ""
-
+var color = "" 
 $(`#register-form`).submit(function (event) {
   event.preventDefault();
 
@@ -49,31 +49,33 @@ $(`#register-form`).submit(function (event) {
           const userId = userCredential.user.uid;
           const userDoc = usersCollection.doc(userId);
 
-          if (file === null) {
+          if (await $('#fileInput')[0].files.length != 0) {
             const storagePath = 'images/' + userId + '/' + file.name;
             const fileRef = storageRef.ref().child(storagePath);
 
             await fileRef.put(file).then(async function (snapshot) {
               await snapshot.ref.getDownloadURL().then(async function (url) {
                 imgURL = await url;
+                color = ""
                 console.log("все ок");
               });
             });
-          }else{
+          } else {
             imgURL = "https://firebasestorage.googleapis.com/v0/b/chay-60f5d.appspot.com/o/ase.png?alt=media&token=0b5d3f57-3d6b-46d5-8546-15d6c48635c9"
-            console.log("все ок"); 
-          } 
+            color = Math.floor(Math.random() * (361))
+            console.log("все ок");
+          }
           console.log(userId);
           await userDoc.set({
             email: email,
             name: name,
             password: password,
             imgURL: imgURL,
-            color: Math.floor(Math.random() * (361)),
+            color: color,
             searchId: "@baseuser",
           })
           localStorage.setItem('userID', JSON.stringify(userId));
-          window.location.href = "main.html";
+          window.location.href = "Main.html";
         }).catch((error) => {
           console.error('Не удалось создать пользователя: ' + error.message);
         })
@@ -117,7 +119,7 @@ $('#login-form').submit(function (event) {
 
   auth.signInWithEmailAndPassword(email, password).then(() => {
     localStorage.setItem('userID', JSON.stringify(auth.currentUser.uid));
-    window.location.href = "main.html";
+    window.location.href = "Main.html";
   }).catch((error) => {
     alert_text.text('пользователя с такими данными несуществует')
     alert.toggleClass("close")
