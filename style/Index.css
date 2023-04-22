@@ -95,7 +95,6 @@ input:-webkit-autofill:active {
 
 .Form .img-form .content .img img {
   height: 100%;
-  filter: hue-rotate(-120deg);
 }
 
 button {
