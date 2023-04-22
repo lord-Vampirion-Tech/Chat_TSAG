@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-storage.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style/root.css">
+  <link rel="stylesheet" href="style/Index.css">
+  <title>SingIm or LogIn</title>
+</head>
+
+<body>
+  <div class="Form _">
+    <h2>Sign In</h2>
+    <div class="img-form">
+      <div class="content _">
+        <div class="img">
+          <img id="img"
+            src="https://firebasestorage.googleapis.com/v0/b/chay-60f5d.appspot.com/o/ase.png?alt=media&token=0b5d3f57-3d6b-46d5-8546-15d6c48635c9"
+            alt="...">
+        </div>
+      </div>
+      <input style="opacity: 0; position: absolute; width: 0;" type="file" id="fileInput">
+      <button id="fileButton">Select Image</button>
+    </div>
+    <form id="register-form">
+      <input type="text" placeholder="Email . . ." name="email" id="email-1">
+      <input type="text" placeholder="Name . . ." name="name" id="name">
+      <input type="text" placeholder="Password . . ." name="password" id="password-1">
+      <button>Sign In</button>
+    </form>
+  </div>
+  <div class="Form _">
+    <h2>Log In</h2>
+    <form id="login-form">
+      <input type="text" placeholder="Email . . ." name="email" id="email-2">
+      <input type="text" placeholder="Password . . ." name="password" id="password-2">
+      <button>Sign In</button>
+    </form>
+  </div>
+
+  <div id="alert" class="alert close">
+    <div>
+      <p id="text">text</p>
+      <button onclick="$(`.alert`).toggleClass(`close`)">Ok</button>
+    </div>
+  </div>
+  <script type="module" src="script/Index.js"></script>
+</body>
+
+</html>
