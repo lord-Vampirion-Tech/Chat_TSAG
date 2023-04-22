@@ -18,8 +18,9 @@ firebase.auth().onAuthStateChanged((user) => {
     userRef.get().then(async (doc) => {
       if (doc.exists) {
         const userData = doc.data(); 
-        imgField.attr('src', userData.imgURL).css("filter", `sepia(100%) hue-rotate(${userData.color}deg)`)
-        
+
+        if (userData.color != "") imgField.attr('src', userData.imgURL).css("filter", `sepia(100%) hue-rotate(${userData.color}deg)`)
+        else imgField.attr('src', userData.imgURL)
         nameField.text(userData.name);
         searchIdField.text(userData.searchId);
       } else {
@@ -50,9 +51,7 @@ $('#delete').click(async function () {
         console.log(`фото пользователя с ID ${user} удалено`);
       });
     })
-
-    // await folderRef.delete()
-
+ 
     alert(`Пользователь с ID ${user} удален`);
     window.location.href = "index.html";
   } catch (error) {
