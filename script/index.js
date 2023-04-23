@@ -75,7 +75,7 @@ $(`#register-form`).submit(function (event) {
             searchId: "@baseuser",
           })
           localStorage.setItem('userID', JSON.stringify(userId));
-          window.location.href = "Main.html";
+          window.location.href = "main.html";
         }).catch((error) => {
           console.error('Не удалось создать пользователя: ' + error.message);
         })
@@ -119,7 +119,7 @@ $('#login-form').submit(function (event) {
 
   auth.signInWithEmailAndPassword(email, password).then(() => {
     localStorage.setItem('userID', JSON.stringify(auth.currentUser.uid));
-    window.location.href = "Main.html";
+    window.location.href = "main.html";
   }).catch((error) => {
     alert_text.text('пользователя с такими данными несуществует')
     alert.toggleClass("close")
