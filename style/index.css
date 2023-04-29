@@ -1,0 +1,138 @@
+:root {
+  --background1: #3187dce2;
+  --background2: #124d89e8;
+  --background3: #00000039;
+  --border: #0095e9;
+  --text-color: #000000;
+  --text-color2: #ffffff;
+  --text-color3: #0094e9;
+
+  --border-radius-min: 30px;
+  --border-radius-max: 100px;
+  --border-width: 5px;
+  --pos: -15px;
+
+  --border-radius: var(--border-radius-min) var(--border-radius-max);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-weight: 100;
+  font-family: 'Jockey One', sans-serif;
+  letter-spacing: 3px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  gap: calc(var(--border-width) + 30px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(https://cdnb.artstation.com/p/assets/images/images/017/130/035/large/sephiroth-art-untitled-1.jpg?1554754347);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#fileButton{
+  margin-bottom: 20px;
+}
+button {
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: var(--border);
+  transition: .1s; 
+}
+
+button:hover {
+  background: var(--text-color2)
+}
+
+button:active {
+  color: var(--text-color2);
+  background: var(--background2);
+  box-shadow: 0 0 0px var(--background3);
+}
+
+.Form {
+  width: calc(300px + var(--border-width)*4);
+  background: var(--background2);
+  min-height: 300px;
+  padding: 40px 15px;
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--border-radius);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: inset 0 0 10px var(--border);
+}
+
+.Form h2 {
+  line-height: 35px;
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--border);
+}
+
+.Form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.Form form input {
+  width: 100%;
+  height: 30px;
+  color: var(--text-color2);
+  border-radius: 50px;
+  padding: 10px;
+  background-color: var(--background3);
+  outline: none;
+}
+
+.Form form input::placeholder {
+  color: var(--text-color3);
+}
+
+.Form .img {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  
+  margin: 40px 0; 
+  border-radius: calc(var(--border-radius-min) + 5px);
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+}
+
+.Form .img img {
+  height: 100%;
+}
+
+.Form .img button:hover {
+  background-color: transparent;
+}
+
+@media screen and (width < 800px) {
+  body {
+    flex-direction: column;
+    padding: 40px 0;
+    height: 100%;
+  }
+}

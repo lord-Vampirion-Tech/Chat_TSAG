@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-storage.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <link rel="stylesheet" href="style/index.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="Form">
+    <h2>Sign In</h2>
+    <div class="img">
+      <img id="img" src="img/avatar.png" alt="...">
+    </div>
+    <input style="opacity: 0; position: absolute; width: 0;" type="file" id="fileInput" accept=".jpg,.jpeg,.png">
+    <button onclick="$('#fileInput').click();" id="fileButton">Select Image</button>
+    <form id="register-form">
+      <input type="text" placeholder="Email . . ." name="email" id="email-1">
+      <input type="text" placeholder="Name . . ." name="name" id="name">
+      <input type="text" placeholder="Password . . ." name="password" id="password-1">
+      <button>Sign In</button>
+    </form>
+  </div>
+  <div class="Form">
+    <h2>Log In</h2>
+    <form id="login-form">
+      <input type="text" placeholder="Email . . ." name="email" id="email-2">
+      <input type="text" placeholder="Password . . ." name="password" id="password-2">
+      <button>Log In</button>
+    </form>
+  </div>
+  <script src="script/index.js"></script>
+</body>
+
+</html>

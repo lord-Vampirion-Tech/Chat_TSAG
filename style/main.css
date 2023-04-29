@@ -1,0 +1,115 @@
+:root {
+  --background1: #3187dce2;
+  --background2: #105498e8;
+  --background3: #091420e8;
+  --border: #0095e9;
+  --text-color: #000000;
+  --text-color2: #ffffff;
+  --text-color3: #0094e9;
+
+  --border-radius-min: 30px;
+  --border-radius-max: 100px;
+  --border-width: 5px;
+  --pos: -15px;
+
+  --border-radius: var(--border-radius-min) var(--border-radius-max);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: var(--text-color2);
+  font-weight: 100;
+  font-family: 'Jockey One', sans-serif;
+  letter-spacing: 3px;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--background3);
+}
+
+header {
+  height: 60px;
+  padding: 5px;
+  background-color: var(--background3);
+  display: flex;
+  justify-content: space-between;
+}
+
+header .user {
+  display: flex;
+}
+
+header .img {
+  height: 100%;
+  overflow: hidden;
+  width: 50px;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+header .img img {
+  height: 100%;
+}
+
+header .discription {
+  width: 120px;
+}
+
+header .discription #name {
+  font-size: 24px;
+}
+
+header .discription #searchId {
+  font-size: 12px;
+  color: #ffffff73;
+}
+
+header .button {
+  height: 100%;
+}
+
+header .button button {
+  height: 30%;
+  margin: 5px;
+  width: 60px;
+  background-color: var(--background3);
+  color: var(--text-color3);
+}
+header .button button:hover {
+  background-color: var(--background1);
+  color: var(--text-color1);
+}
+/* header{
+  height: 50px;
+  padding: 5px;
+  background-color: rgb(40, 40, 40);
+  display: flex;
+  align-items: center;
+}
+
+header .img{
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  overflow: hidden;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+}
+ 
+header .img img{
+  height: 100%; 
+}
+header p{
+font-size: 1.2rem;
+} */
