@@ -99,7 +99,7 @@ $(`#register-form`).submit(function (event) {
           console.error('Произошла ошибка: ' + error.message);
         });
       } else {
-        imgURL = "https://github.com/lord-Vampirion-Tech/Chat_TSAG/blob/main/ase.png?raw=true"
+        imgURL = "https://github.com/lord-Vampirion-Tech/Form/blob/main/ase.png?raw=true"
         color = Math.floor(Math.random() * (361))
         console.log("применено стандартное фото");
       }
