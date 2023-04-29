@@ -130,7 +130,7 @@ $('#login-form').submit(function (event) {
   const password = $('#password-2').val();
 
   auth.signInWithEmailAndPassword(email, password).then(() => {
-    window.location.href = "Main.html";
+    window.location.href = "main.html";
   }).catch((error) => {
     console.error("пользователя с такими данными несуществует ", error);
   });
