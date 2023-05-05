@@ -5,7 +5,7 @@
   --border: #0095e9;
   --text-color: #000000;
   --text-color2: #ffffff;
-  --text-color3: #0094e9;
+  --text-color3: rgba(0, 0, 0, 0.5);
 
   --border-radius-min: 30px;
   --border-radius-max: 100px;
@@ -29,87 +29,164 @@
 }
 
 body {
-  width: 100vw;
   min-height: 100vh;
   background-color: var(--background3);
+
+  display: flex;
+  justify-content: center;
+  /* overflow-x: hidden;  */
 }
 
-header {
-  height: 60px;
-  padding: 5px;
-  background-color: var(--background3);
+.Settings {
+  width: 450px;
+  height: 550px;
+  display: grid;
+
+  grid-template-rows: 30px 60px 60px 60px auto 70px;
+  grid-template-columns: 160px 260px;
+
+  grid-template-areas:
+    "header header"
+    "avatar name"
+    "avatar password"
+    "avatar email"
+    "description description"
+    "button button";
+  padding: 10px;
+  gap: 10px;
+  border-radius: 16px;
+  background: #D9D9D9;
+  border: 2px solid #A4A4A4;
+}
+
+button {
+  background: #A4A4A4;
+  border: 2px solid #818181;
+  border-radius: 6px;
+  height: 30px;
+  cursor: pointer;
+  color: var(--text-color3);
+}
+button:hover{
+  background-color: transparent;
+}
+
+input {
+  color: var(--text-color3);
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  height: 30px;
+  padding: 0 5px;
+}
+
+.Settings .header,
+.Settings article {
+  border-radius: 6px;
+  background-color: #A4A4A4;
+  border: 2px solid #818181;
+  overflow: hidden;
+}
+
+.Settings h2 {
+  width: auto;
+  background-color: #1E1E1E;
+  padding: 0 10px;
+}
+
+.Settings .header {
+  grid-area: header;
+  background-color: #1E1E1E;
+}
+
+.Settings .user-img {
+  grid-area: avatar;
+  background-color: transparent;
+  border: 0px;
+}
+
+.Settings .user-img .img {
+  height: 160px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.Settings .user-img .img img {
+  height: 100%;
+  border-radius: 6px;
+  border: 2px solid #818181;
+}
+
+.Settings .user-img button {
+  width: 100%;
+}
+
+.Settings .user-img div {
   display: flex;
   justify-content: space-between;
 }
 
-header .user {
-  display: flex;
+.Settings .user-img div #delete-img {
+  border-radius: 6px 0 0 6px;
 }
 
-header .img {
-  height: 100%;
-  overflow: hidden;
-  width: 50px;
-  margin-right: 5px;
-  display: flex;
-  justify-content: center;
-  border-radius: 10px;
+.Settings .user-img div #upload-img {
+  border-radius: 0 6px 6px 0;
 }
 
-header .img img {
-  height: 100%;
+.Settings .user-name {
+  grid-area: name;
 }
 
-header .discription {
-  width: 120px;
+.Settings .user-password {
+  grid-area: password;
 }
 
-header .discription #name {
-  font-size: 24px;
+.Settings .user-email {
+  grid-area: email;
 }
 
-header .discription #searchId {
-  font-size: 12px;
-  color: #ffffff73;
+.Settings .user-description {
+  grid-area: description;
 }
 
-header .button {
-  height: 100%;
-}
-
-header .button button {
-  height: 30%;
-  margin: 5px;
-  width: 60px;
-  background-color: var(--background3);
+.Settings .user-description textarea {
+  width: 100%;
+  height: 86%;
   color: var(--text-color3);
-}
-header .button button:hover {
-  background-color: var(--background1);
-  color: var(--text-color1);
-}
-/* header{
-  height: 50px;
+  background-color: #A4A4A4;
+  outline: none;
   padding: 5px;
-  background-color: rgb(40, 40, 40);
-  display: flex;
-  align-items: center;
+
+  resize: none;
 }
 
-header .img{
-  height: 40px;
-  width: 40px;
-  margin-right: 10px;
-  overflow: hidden;
-  border-radius: 5px;
+.Settings .buttons {
+  grid-area: button;
+  background-color: transparent;
+  border: 0px;
 
+}
+
+.Settings .buttons #save {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.Settings .buttons div {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
- 
-header .img img{
-  height: 100%; 
+
+.Settings .buttons div #delete-account {
+  border-radius: 6px 0 0 6px;
 }
-header p{
-font-size: 1.2rem;
-} */
+
+.Settings .buttons div #log-out {
+  border-radius: 0 6px 6px 0;
+}
+
+.Settings .buttons div button {
+  width: 100%;
+}
