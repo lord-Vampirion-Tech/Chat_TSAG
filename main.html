@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -11,6 +11,7 @@
   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-storage.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <link rel="stylesheet" href="style/main.css">
@@ -18,22 +19,46 @@
 </head>
 
 <body>
-  <header>
-    <div class="user">
-      <div class="img"><img id="img" src="https://github.com/lord-Vampirion-Tech/Form/blob/main/ase.png?raw=true" alt=". . ."></div>
-      <div class="discription">
-        <p id="name">_____</p>
-        <p id="searchId">_____</p>
-      </div>
-    </div>
-    <div class="button">
-      <button id="delete">delete</button><br>
-      <button id="exit" onclick="window.location.href = `index.html`">exit</button>
-    </div>
-  </header> 
+  <main>
+    <section class="Settings">
+      <h2 class="header">Settings</h2>
+      <article class="user-img">
+        <div class="img"><img id="img" src="https://github.com/lord-Vampirion-Tech/Chat_TSAG/blob/main/ase.png?raw=true"
+            alt="..."></div>
+        <div>
+          <input style="opacity: 0; position: absolute; width: 0;" type="file" id="fileInput" accept=".jpg,.jpeg,.png">
+          <button id="delete-img">Delete</button>
+          <button id="upload-img" onclick="$('#fileInput').click();">Upload</button>
+        </div>
+      </article>
+      <article class="user-name">
+        <h2>Name</h2>
+        <input type="text" name="name" id="name">
+      </article>
 
+      <article class="user-password">
+        <h2>Password</h2>
+        <input type="password" name="password" id="password">
+      </article>
 
+      <article class="user-email">
+        <h2>Email</h2>
+        <input type="email" name="email" id="email">
+      </article>
 
+      <article class="user-description">
+        <h2>Description</h2>
+        <textarea name="description" id="descrip"></textarea>
+      </article>
+      <article class="buttons">
+        <button id="save">Save changes</button>
+        <div>
+          <button id="delete-account">Delete account</button>
+          <button id="log-out" onclick='window.location.href = "index.html"'>Log out</button>
+        </div>
+      </article>
+    </section>
+  </main>
   <script src="script/main.js"></script>
 </body>
 
