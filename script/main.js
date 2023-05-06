@@ -67,6 +67,8 @@ firebase.auth().onAuthStateChanged((user) => {
         emailField.val(userData.email);
       }
     })
+  } else{
+    window.location.href = "index.html";
   }
 })
 
